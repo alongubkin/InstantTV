@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace InstantTV
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            var torrentsNode = _tree.Nodes.Add("Torrents");
+            torrentsNode.Nodes.Add("Downloadig...");
         }
     }
 }
